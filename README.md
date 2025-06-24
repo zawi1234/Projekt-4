@@ -13,6 +13,13 @@ przedstawiona na modelu osadzonym w przestrzeni dwuwymiarowej.
 Użytkownik tworzy nowe osoby klikając przycisk na odpowiednim piętrze. Liczby na przycziskąch oznaczają 
 pietro docelowe stworzonej osoby.
 
+Jeżeli winda stoi to po stworzeniu pierwszej osoby winda wybiera odpowiedni kierunek i dodaje te piętro do kolejki.
+Gdy winda porusza się i pojawi się nowe wezwanie winda sprawdza czy może je dodać do aktualnej kolejki. Jeżeli tak opcja 
+nie istnije piętro jest dodawane do odpowidniej kolejki zależności od kierunku jazdy. 
+Jeżeli winda zatrzyma się na pietrze. z windy najpierw wychodzą osoby a następnie do windy wchodzą jedynie osoby których 
+kierunek jazdy zgadza się z kierunkiem jazdy windy.W przypadku kiedy waga jest maksymalna i nikt nie moze już wjeść osoby 
+te zostają na pietrze i nie są usuwane z kolejki. 
+
 
 Winda po zatrzymaniu się zaczyna odliczać czas do 5 sekund po czym zaczyna wracać na parter.
 
