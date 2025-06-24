@@ -1,5 +1,5 @@
 # Projekt-4
-Szymon Zawiślka 203531
+Szymon Zawiślka 203531 \n
 Piotr Wilk 203469
 
 
