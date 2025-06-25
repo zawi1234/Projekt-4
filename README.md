@@ -1,5 +1,5 @@
 # Projekt 4 Zadanie 3(Winda)
-Szymon Zawiślka 203531\
+Szymon Zawiślak 203531\
 Piotr Wilk 203469
 
 
