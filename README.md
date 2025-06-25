@@ -24,3 +24,7 @@ Po zatrzymaniu się, winda odlicza 5 sekund postoju. Jeśli w tym czasie nie poj
 
 
 
+
+
+https://github.com/user-attachments/assets/13e5002d-68e0-433f-939f-e6bb472e0d2e
+
