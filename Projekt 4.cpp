@@ -130,6 +130,10 @@ public:
     void RuchWindy(int gornaKrawedzSzybu, int wysokoscPietra, int margines) {
         time_t teraz = time(NULL);
 
+        // Postój windy na pietrze
+        if (CzyPostoj && difftime(teraz, CzasPostoju) < 3) // Czeka 3 sekundy
+            return;
+        CzyPostoj = false;
 
         // Powrót na parter
         if (KierunekJazdy == 'S' && osobyWinda.empty() && KolejkaJazdy.empty() &&
@@ -279,6 +283,10 @@ public:
                 GdzieJechac(osobyNaTymPietrze[i].DokadJedzie(), osobyNaTymPietrze[i].PodajKierunek());
                 osobyNaTymPietrze.erase(osobyNaTymPietrze.begin() + i);
                 ktosWsiadl = true;
+
+                // winda czeka 3 sekundy zanim ruszy
+                CzyPostoj = true;
+                CzasPostoju = time(NULL);
             }
             else {
                 i++;
@@ -607,4 +615,4 @@ LRESULT CALLBACK ProceduraOkna(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPara
     }
     }
     return DefWindowProc(hwnd, uMsg, wParam, lParam);
-}
+};
