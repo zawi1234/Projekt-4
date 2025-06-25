@@ -1,4 +1,4 @@
-﻿// Symulacja Windy
+// Symulacja Windy
 //Piotr Wilk 203469
 //Szymon Zawiślak 203531
 
@@ -300,8 +300,8 @@ public:
         }
 
         // Jeśli nie wszyscy mogli wsiąść dodaj pietro spowrotem
-        for (const auto& o : osobyNaTymPietrze) {
-            if (o.SkadJedzie() == AktualnePietro && o.PodajKierunek() == KierunekJazdy) {
+        for (const auto& osoba : osobyNaTymPietrze) {
+            if (osoba.SkadJedzie() == AktualnePietro && osoba.PodajKierunek() == KierunekJazdy) {
                 if (KierunekJazdy == 'G') {
                     if (find(KolejkaCzekajacychGora.begin(), KolejkaCzekajacychGora.end(), AktualnePietro) == KolejkaCzekajacychGora.end()) {
                         KolejkaCzekajacychGora.push_back(AktualnePietro);
