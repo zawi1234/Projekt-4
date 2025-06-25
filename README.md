@@ -10,17 +10,17 @@ przedstawiona na modelu osadzonym w przestrzeni dwuwymiarowej.
 
 ![image](https://github.com/user-attachments/assets/2a7168b5-9463-4c91-aee0-11e31f72ed3a)
 
-Użytkownik tworzy nowe osoby klikając przycisk na odpowiednim piętrze. Liczby na przycziskąch oznaczają 
-pietro docelowe stworzonej osoby.
+Użytkownik tworzy nowe osoby, klikając przycisk na odpowiednim piętrze. Liczby na przyciskach oznaczają piętro docelowe stworzonej osoby.
 
-Jeżeli winda stoi to po stworzeniu pierwszej osoby winda wybiera odpowiedni kierunek i dodaje te piętro do kolejki.
-Gdy winda porusza się i pojawi się nowe wezwanie winda sprawdza czy może je dodać do aktualnej kolejki. Jeżeli tak opcja 
-nie istnije piętro jest dodawane do odpowidniej kolejki zależności od kierunku jazdy. 
-Jeżeli winda zatrzyma się na pietrze. z windy najpierw wychodzą osoby a następnie do windy wchodzą jedynie osoby których 
-kierunek jazdy zgadza się z kierunkiem jazdy windy.W przypadku kiedy waga jest maksymalna i nikt nie moze już wjeść osoby 
-te zostają na pietrze i nie są usuwane z kolejki. 
+Jeżeli winda stoi (KierunekJazdy == 'S'), to po stworzeniu pierwszej osoby winda wybiera odpowiedni kierunek ('G' lub 'D') i dodaje to piętro do kolejki jazdy.
+
+Podczas ruchu windy, gdy pojawi się nowe wezwanie, winda sprawdza, czy można dodać je do aktualnej kolejki w zależności od kierunku jazdy i położenia piętra. Jeżeli nie, piętro jest dodawane do odpowiedniej kolejki oczekujących (KolejkaCzekajacychGora lub KolejkaCzekajacychDol).
+
+Nowo dodane piętra są sortowane rosnąco lub malejąco w kolejce, aby zoptymalizować trasę windy (w górę rosnąco, w dół malejąco).
+
+Gdy winda zatrzyma się na piętrze, najpierw wysiadają osoby, których celem jest to piętro, a następnie wsiadają osoby z tego piętra, które chcą jechać w tym samym kierunku co winda (lub ustawiają kierunek, jeśli winda stoi). Jeśli winda jest pełna (waga osób >= 600), osoby które nie zmieszczą się, pozostają na piętrze i nie są usuwane z kolejki oczekujących. Winda posiada mechanizm wyświetlający aktualną sumaryczną wagę wszystkich pasażerów w prawym górnym rogu interfejsu.
+
+Po zatrzymaniu się, winda odlicza 5 sekund postoju. Jeśli w tym czasie nie pojawią się nowe wezwania, winda automatycznie zaczyna wracać na parter (piętro 0).
 
 
-Winda po zatrzymaniu się zaczyna odliczać czas do 5 sekund po czym zaczyna wracać na parter.
 
-Winda posiada mechanizm, który wyświetla aktualna wage wsyzstkich użytkowników windy w prawym górnym rogu.
