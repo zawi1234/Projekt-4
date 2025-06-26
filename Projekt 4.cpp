@@ -145,10 +145,7 @@ public:
             }
         }
 
-        // Postój windy na pietrze
-        if (CzyPostoj && difftime(teraz, CzasPostoju) < 3)
-            return;
-        CzyPostoj = false;
+       
 
         // Przekazywanie nowej kolejki
         if (KolejkaJazdy.empty()) {
